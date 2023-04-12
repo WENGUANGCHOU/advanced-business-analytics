@@ -1,0 +1,1598 @@
+<!DOCTYPE html>
+<html class="ods_4e003cdf-0b82-4af9-81e5-894d42681e5d" lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8"/>
+<meta content="SAS V.03.05" name="generator"/>
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data: ;"/>
+<title>Results:雏形01.sas</title>
+<style>
+/*<![CDATA[*/
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .body.c section > table, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .body.c section > pre, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .body.c div > table,
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .body.c div > pre, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .body.c article > table, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .body.c article > pre,
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .body.j section > table, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .body.j section > pre, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .body.j div > table,
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .body.j div > pre, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .body.j article > table, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .body.j article > pre,
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .body.c p.note, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .body.c p.warning, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .body.c p.error, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .body.c p.fatal,
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .body.j p.note, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .body.j p.warning, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .body.j p.error, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .body.j p.fatal,
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .body.c > table.layoutcontainer, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .body.j > table.layoutcontainer { margin-left: auto; margin-right: auto }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .layoutregion.l table, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .layoutregion.l pre, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .layoutregion.l p.note,
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .layoutregion.l p.warning, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .layoutregion.l p.error, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .layoutregion.l p.fatal { margin-left: 0 }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .layoutregion.c table, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .layoutregion.c pre, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .layoutregion.c p.note,
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .layoutregion.c p.warning, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .layoutregion.c p.error, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .layoutregion.c p.fatal { margin-left: auto; margin-right: auto }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .layoutregion.r table, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .layoutregion.r pre, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .layoutregion.r p.note,
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .layoutregion.r table, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .layoutregion.r pre, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .layoutregion.r p.note,
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .layoutregion.r p.warning, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .layoutregion.r p.error, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .layoutregion.r p.fatal { margin-right: 0 }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d article, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d aside, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d details, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d figcaption, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d figure, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d footer, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d header, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d hgroup, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d nav, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d section { display: block }
+html.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d { font-size: 100% }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .body { margin: 1em; font-size: 13px; line-height: 1.231 }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d sup { position: relative; vertical-align: baseline; bottom: 0.25em; font-size: 0.8em }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d sub { position: relative; vertical-align: baseline; top: 0.25em; font-size: 0.8em }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d ul, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d ol { margin: 1em 0; padding: 0 0 0 40px }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d dd { margin: 0 0 0 40px }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d nav ul, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0 }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d img { border: 0; vertical-align: middle }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d svg:not(:root) { overflow: hidden }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d figure { margin: 0 }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d table { border-collapse: collapse; border-spacing: 0 }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .layoutcontainer { border-collapse: separate; border-spacing: 0 }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d p { margin-top: 0; text-align: left }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d h1.heading1 { text-align: left }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d h2.heading2 { text-align: left }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d h3.heading3 { text-align: left }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d h4.heading4 { text-align: left }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d h5.heading5 { text-align: left }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d h6.heading6 { text-align: left }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d span { text-align: left }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d table { margin-bottom: 1em }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d td, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d th { text-align: left; padding: 3px 6px; vertical-align: top }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d td[class$="fixed"], .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d th[class$="fixed"] { white-space: pre }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d section, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d article { padding-top: 1px; padding-bottom: 8px }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d hr.pagebreak { height: 0px; border: 0; border-bottom: 1px solid #c0c0c0; margin: 1em 0 }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .stacked-value { text-align: left; display: block }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .stacked-cell > .stacked-value, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d td.data > td.data, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d th.data > td.data, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d th.data > th.data, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d td.data > th.data, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d th.header > th.header { border: 0 }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .stacked-cell > div.data { border-width: 0 }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .systitleandfootercontainer { white-space: nowrap; margin-bottom: 1em }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .systitleandfootercontainer > p { margin: 0 }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .systitleandfootercontainer > p > span { display: inline-block; width: 100%; white-space: normal }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .batch { display: table }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .toc { display: none }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .proc_note_group, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .proc_title_group { margin-bottom: 1em }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d p.proctitle { margin: 0 }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d p.note, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d p.warning, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d p.error, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d p.fatal { display: table }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .notebanner, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .warnbanner, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .errorbanner, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .fatalbanner,
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .notecontent, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .warncontent, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .errorcontent, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .fatalcontent { display: table-cell; padding: 0.5em }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .notebanner, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .warnbanner, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .errorbanner, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .fatalbanner { padding-right: 0 }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .body > div > ol li { text-align: left }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .beforecaption > h4 { margin-top: 0; margin-bottom: 0 }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .c { text-align: center }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .r { text-align: right }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .l { text-align: left }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .j { text-align: justify }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .d { text-align: right }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .b { vertical-align: bottom }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .m { vertical-align: middle }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .t { vertical-align: top }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .accessiblecaption {
+    background-color: #ffffff;
+    color: #696969;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d a:active { color: #2a3037 }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .aftercaption {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #2a3037;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+    padding-top: 4pt;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .batch > colgroup {
+    border-left: 1px solid #696969;
+    border-right: 1px solid #696969;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .batch > tbody, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .batch > thead, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .batch > tfoot {
+    border-top: 1px solid #696969;
+    border-bottom: 1px solid #696969;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .batch { border: hidden; }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .batch {
+    background-color: #ffffff;
+    border: 1px solid #696969;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #2a3037;
+    font-family: 'SAS Monospace', 'Courier New', Courier, monospace;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+    padding: 7px;
+    }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .beforecaption {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #2a3037;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .body {
+    background-color: #ffffff;
+    color: #696969;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .bodydate {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #696969;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+    text-align: right;
+    vertical-align: top;
+    width: 100%;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .bycontentfolder {
+    color: #696969;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .byline {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #696969;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .bylinecontainer > col, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .bylinecontainer > colgroup > col, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .bylinecontainer > colgroup, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .bylinecontainer > tr, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .bylinecontainer > * > tr, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .bylinecontainer > thead, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .bylinecontainer > tbody, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .bylinecontainer > tfoot { border: none; }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .bylinecontainer {
+    background-color: #ffffff;
+    border: none;
+    border-spacing: 1px;
+    color: #696969;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .caption {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #2a3037;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .cell, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .container {
+    background-color: #ffffff;
+    color: #696969;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .contentfolder, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .contentitem {
+    color: #696969;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .contentproclabel, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .contentprocname {
+    background-color: #ffffff;
+    color: #696969;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .contents {
+    background-color: #ffffff;
+    color: #696969;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .contentsdate {
+    background-color: #ffffff;
+    color: #696969;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .contenttitle {
+    background-color: #ffffff;
+    color: #696969;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: bold;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .continued {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #696969;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+    width: 100%;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .data {
+    background-color: #ffffff;
+    border: 1px solid #ebedef;
+    color: #2a3037;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .dataemphasis {
+    background-color: #ffffff;
+    border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .dataemphasisfixed {
+    background-color: #ffffff;
+    border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .dataempty {
+    background-color: #ffffff;
+    border: 1px solid #ebedef;
+    color: #2a3037;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .datafixed {
+    background-color: #ffffff;
+    border: 1px solid #ebedef;
+    color: #2a3037;
+    font-family: 'Courier New', Courier;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .datastrong {
+    background-color: #ffffff;
+    border: 1px solid #ebedef;
+    color: #2a3037;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .datastrongfixed {
+    background-color: #ffffff;
+    border: 1px solid #ebedef;
+    color: #2a3037;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .date {
+    background-color: #ffffff;
+    color: #696969;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .document {
+    background-color: #ffffff;
+    color: #696969;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .errorbanner {
+    background-color: #ffffff;
+    color: #696969;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .errorcontent {
+    background-color: #ffffff;
+    color: #696969;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .errorcontentfixed {
+    background-color: #ffffff;
+    color: #696969;
+    font-family: 'Courier New', Courier;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .extendedpage {
+    background-color: #ffffff;
+    border-style: solid;
+    border-width: 1pt;
+    color: #696969;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: normal;
+    text-align: center;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .fatalbanner {
+    background-color: #ffffff;
+    color: #696969;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .fatalcontent {
+    background-color: #ffffff;
+    color: #696969;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .fatalcontentfixed {
+    background-color: #ffffff;
+    color: #696969;
+    font-family: 'Courier New', Courier;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .folderaction {
+    color: #696969;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .footer {
+    background-color: #ffffff;
+    border: 1px solid #ebedef;
+    color: #2a3037;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .footeremphasis {
+    background-color: #ffffff;
+    border: 1px solid #ebedef;
+    color: #2a3037;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .footeremphasisfixed {
+    background-color: #ffffff;
+    border: 1px solid #ebedef;
+    color: #2a3037;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .footerempty {
+    background-color: #ffffff;
+    border: 1px solid #ebedef;
+    color: #2a3037;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .footerfixed {
+    background-color: #ffffff;
+    border: 1px solid #ebedef;
+    color: #2a3037;
+    font-family: 'Courier New', Courier;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .footerstrong {
+    background-color: #ffffff;
+    border: 1px solid #ebedef;
+    color: #2a3037;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .footerstrongfixed {
+    background-color: #ffffff;
+    border: 1px solid #ebedef;
+    color: #2a3037;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .frame {
+    background-color: #ffffff;
+    color: #696969;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .graph > colgroup {
+    border-left: 1px solid #696969;
+    border-right: 1px solid #696969;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .graph > tbody, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .graph > thead, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .graph > tfoot {
+    border-top: 1px solid #696969;
+    border-bottom: 1px solid #696969;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .graph { border: hidden; }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .graph {
+    background-color: #ffffff;
+    border: 1px solid #696969;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #696969;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+    }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .header {
+    background-color: #ffffff;
+    border: 1px solid #ebedef;
+    color: #2a3037;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .headeremphasis {
+    background-color: #ffffff;
+    border: 1px solid #ebedef;
+    color: #2a3037;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .headeremphasisfixed {
+    background-color: #ffffff;
+    border: 1px solid #ebedef;
+    color: #2a3037;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .headerempty {
+    background-color: #ffffff;
+    border: 1px solid #ebedef;
+    color: #2a3037;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .headerfixed {
+    background-color: #ffffff;
+    border: 1px solid #ebedef;
+    color: #2a3037;
+    font-family: 'Courier New', Courier;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .headersandfooters {
+    background-color: #ffffff;
+    color: #2a3037;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .headerstrong {
+    background-color: #ffffff;
+    border: 1px solid #ebedef;
+    color: #2a3037;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .headerstrongfixed {
+    background-color: #ffffff;
+    border: 1px solid #ebedef;
+    color: #2a3037;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .heading1, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .heading2, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .heading3, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .heading4, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .heading5, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .heading6 { font-family: Arial, Helvetica, sans-serif }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .index {
+    background-color: #ffffff;
+    color: #696969;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .indexaction, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .indexitem {
+    color: #696969;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .indexprocname {
+    background-color: #ffffff;
+    color: #696969;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .indextitle {
+    background-color: #ffffff;
+    color: #696969;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: bold;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .layoutcontainer, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .layoutregion {
+    border-width: 0;
+    border-spacing: 30px;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .linecontent {
+    background-color: #ffffff;
+    border: 1px solid #ebedef;
+    color: #696969;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d a:link { color: #0066aa }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .list {
+    background-color: #ffffff;
+    color: #696969;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: disc;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .list10 {
+    background-color: #ffffff;
+    color: #696969;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: square;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .list2 {
+    background-color: #ffffff;
+    color: #696969;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: circle;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .list3, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .list4, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .list5, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .list6, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .list7, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .list8, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .list9 {
+    background-color: #ffffff;
+    color: #696969;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: square;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .listitem {
+    background-color: #ffffff;
+    color: #696969;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: disc;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .listitem10 {
+    background-color: #ffffff;
+    color: #696969;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: square;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .listitem2 {
+    background-color: #ffffff;
+    color: #696969;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: circle;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .listitem3, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .listitem4, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .listitem5, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .listitem6, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .listitem7, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .listitem8, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .listitem9 {
+    background-color: #ffffff;
+    color: #696969;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: square;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .note {
+    background-color: #ffffff;
+    color: #696969;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .notebanner {
+    background-color: #ffffff;
+    color: #696969;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .notecontent {
+    background-color: #ffffff;
+    color: #696969;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .notecontentfixed {
+    background-color: #ffffff;
+    color: #696969;
+    font-family: 'Courier New', Courier;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .output > colgroup {
+    border-left: 1px solid #696969;
+    border-right: 1px solid #696969;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .output > tbody, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .output > thead, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .output > tfoot {
+    border-top: 1px solid #696969;
+    border-bottom: 1px solid #696969;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .output { border: hidden; }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .output {
+    background-color: #ffffff;
+    border: 1px solid #696969;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #696969;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+    }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .pageno {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #696969;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+    text-align: right;
+    vertical-align: top;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .pages {
+    background-color: #ffffff;
+    color: #696969;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .pagesdate {
+    background-color: #ffffff;
+    color: #696969;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .pagesitem {
+    color: #696969;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .pagesproclabel, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .pagesprocname {
+    background-color: #ffffff;
+    color: #696969;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .pagestitle {
+    background-color: #ffffff;
+    color: #696969;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: bold;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .paragraph {
+    background-color: #ffffff;
+    color: #696969;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .parskip > col, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .parskip > colgroup > col, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .parskip > colgroup, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .parskip > tr, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .parskip > * > tr, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .parskip > thead, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .parskip > tbody, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .parskip > tfoot { border: none; }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .parskip {
+    border: none;
+    border-spacing: 0;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+    }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .prepage {
+    background-color: #ffffff;
+    color: #696969;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+    text-align: left;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .proctitle {
+    background-color: #ffffff;
+    color: #696969;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .proctitlefixed {
+    background-color: #ffffff;
+    color: #696969;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .rowfooter {
+    background-color: #ffffff;
+    border: 1px solid #ebedef;
+    color: #2a3037;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .rowfooteremphasis {
+    background-color: #ffffff;
+    border: 1px solid #ebedef;
+    color: #2a3037;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .rowfooteremphasisfixed {
+    background-color: #ffffff;
+    border: 1px solid #ebedef;
+    color: #2a3037;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .rowfooterempty {
+    background-color: #ffffff;
+    border: 1px solid #ebedef;
+    color: #2a3037;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .rowfooterfixed {
+    background-color: #ffffff;
+    border: 1px solid #ebedef;
+    color: #2a3037;
+    font-family: 'Courier New', Courier;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .rowfooterstrong {
+    background-color: #ffffff;
+    border: 1px solid #ebedef;
+    color: #2a3037;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .rowfooterstrongfixed {
+    background-color: #ffffff;
+    border: 1px solid #ebedef;
+    color: #2a3037;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .rowheader {
+    background-color: #ffffff;
+    border: 1px solid #ebedef;
+    color: #2a3037;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .rowheaderemphasis {
+    background-color: #ffffff;
+    border: 1px solid #ebedef;
+    color: #2a3037;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .rowheaderemphasisfixed {
+    background-color: #ffffff;
+    border: 1px solid #ebedef;
+    color: #2a3037;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .rowheaderempty {
+    background-color: #ffffff;
+    border: 1px solid #ebedef;
+    color: #2a3037;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .rowheaderfixed {
+    background-color: #ffffff;
+    border: 1px solid #ebedef;
+    color: #2a3037;
+    font-family: 'Courier New', Courier;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .rowheaderstrong {
+    background-color: #ffffff;
+    border: 1px solid #ebedef;
+    color: #2a3037;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .rowheaderstrongfixed {
+    background-color: #ffffff;
+    border: 1px solid #ebedef;
+    color: #2a3037;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .systemfooter, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .systemfooter10, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .systemfooter2, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .systemfooter3, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .systemfooter4, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .systemfooter5, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .systemfooter6, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .systemfooter7, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .systemfooter8, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .systemfooter9 {
+    background-color: #ffffff;
+    color: #696969;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .systemtitle, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .systemtitle10, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .systemtitle2, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .systemtitle3, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .systemtitle4, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .systemtitle5, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .systemtitle6, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .systemtitle7, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .systemtitle8, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .systemtitle9 {
+    background-color: #ffffff;
+    color: #696969;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .systitleandfootercontainer > col, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .systitleandfootercontainer > colgroup > col, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .systitleandfootercontainer > colgroup, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .systitleandfootercontainer > tr, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .systitleandfootercontainer > * > tr, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .systitleandfootercontainer > thead, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .systitleandfootercontainer > tbody, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .systitleandfootercontainer > tfoot { border: none; }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .systitleandfootercontainer {
+    background-color: #ffffff;
+    border: none;
+    border-spacing: 1px;
+    color: #696969;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .table > col, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .table > colgroup > col {
+    border-left: 1px solid #c1c1c1;
+    border-right: 0 solid #c1c1c1;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .table > tr, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .table > * > tr {
+    border-top: 1px solid #c1c1c1;
+    border-bottom: 0 solid #c1c1c1;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .table { border: hidden; }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .table {
+    border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 1px 0 0 1px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .titleandnotecontainer > col, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .titleandnotecontainer > colgroup > col, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .titleandnotecontainer > colgroup, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .titleandnotecontainer > tr, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .titleandnotecontainer > * > tr, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .titleandnotecontainer > thead, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .titleandnotecontainer > tbody, .ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .titleandnotecontainer > tfoot { border: none; }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .titleandnotecontainer {
+    background-color: #ffffff;
+    border: none;
+    border-spacing: 1px;
+    color: #696969;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .titlesandfooters {
+    background-color: #ffffff;
+    color: #696969;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .usertext {
+    background-color: #ffffff;
+    color: #696969;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d a:visited { color: #2a3037 }
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .warnbanner {
+    background-color: #ffffff;
+    color: #696969;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .warncontent {
+    background-color: #ffffff;
+    color: #696969;
+    font-family: 'Avenir Next for SAS', Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_4e003cdf-0b82-4af9-81e5-894d42681e5d .warncontentfixed {
+    background-color: #ffffff;
+    color: #696969;
+    font-family: 'Courier New', Courier;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+}
+/*]]>*/
+</style>
+</head>
+<body class="body">
+<div id="div_4e003cdf-0b82-4af9-81e5-894d42681e5d" class="c body">
+<h1 class="body toc">Results:雏形01.sas</h1>
+<section data-name="Means" data-sec-type="proc">
+<div id="IDX" class="proc_title_group">
+<p class="c proctitle">The MEANS Procedure</p>
+</div>
+<h1 class="contentprocname toc">The Means Procedure</h1>
+<article aria-label="Summary statistics">
+<h1 class="contentitem toc">Summary statistics</h1>
+<table class="table" style="border-spacing: 0" aria-label="Summary statistics">
+<caption aria-label="Summary statistics"></caption>
+<colgroup><col/><col/></colgroup><colgroup><col/><col/><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="8" scope="colgroup">Analysis Variable : chg</th>
+</tr>
+<tr>
+<th class="r b header" scope="col">trt</th>
+<th class="r b header" scope="col">N Obs</th>
+<th class="r b header" scope="col">N</th>
+<th class="r b header" scope="col">N Miss</th>
+<th class="r b header" scope="col">Mean</th>
+<th class="r b header" scope="col">Lower 95%<br/>CL for Mean</th>
+<th class="r b header" scope="col">Upper 95%<br/>CL for Mean</th>
+<th class="r b header" scope="col">Std Error</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="r t data">1</th>
+<th class="r t data">630</th>
+<td class="r data">399</td>
+<td class="r data">231</td>
+<td class="r data">0.0792610</td>
+<td class="r data" style="white-space: nowrap">-0.1075599</td>
+<td class="r data">0.2660819</td>
+<td class="r data">0.0950287</td>
+</tr>
+<tr>
+<th class="r t data">2</th>
+<th class="r t data">630</th>
+<td class="r data">630</td>
+<td class="r data">0</td>
+<td class="r data" style="white-space: nowrap">-1.0313149</td>
+<td class="r data" style="white-space: nowrap">-1.1768570</td>
+<td class="r data" style="white-space: nowrap">-0.8857728</td>
+<td class="r data">0.0741146</td>
+</tr>
+</tbody>
+</table>
+</article>
+</section>
+<section data-name="MI" data-sec-type="proc">
+<hr class="pagebreak"/>
+<div id="IDX1" class="proc_title_group">
+<p class="c proctitle">The MI Procedure</p>
+</div>
+<h1 class="contentprocname toc">The MI Procedure</h1>
+<article aria-label="Model Information">
+<h1 class="contentitem toc">Model Information</h1>
+<table class="table" style="border-spacing: 0" aria-label="Model Information">
+<caption aria-label="Model Information"></caption>
+<colgroup><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="2" scope="colgroup">Model Information</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Data Set</th>
+<td class="data">WORK.G</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Method</th>
+<td class="data">Monotone</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Number of Imputations</th>
+<td class="data">5</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Seed for random number generator</th>
+<td class="data">246005348</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX2" aria-label="Monotone Model Specification">
+<h1 class="contentitem toc">Monotone Model Specification</h1>
+<table class="table" style="border-spacing: 0" aria-label="Monotone Model Specification">
+<caption aria-label="Monotone Model Specification"></caption>
+<colgroup><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="2" scope="colgroup">Monotone Model Specification</th>
+</tr>
+<tr>
+<th class="b header" scope="col">Method</th>
+<th class="b header" scope="col">Imputed Variables</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="data">Regression</td>
+<td class="data">base w21m</td>
+</tr>
+<tr>
+<td class="data">Discriminant Function</td>
+<td class="data">ecog</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX3" aria-label="Missing Data Patterns">
+<h1 class="contentitem toc">Missing Data Patterns</h1>
+<table class="table" style="border-spacing: 0" aria-label="Missing Data Patterns">
+<caption aria-label="Missing Data Patterns"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/><col/><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="9" scope="colgroup">Missing Data Patterns</th>
+</tr>
+<tr>
+<th class="r b header" rowspan="2" scope="col">Group</th>
+<th class="b header" rowspan="2" scope="col">trt</th>
+<th class="b header" rowspan="2" scope="col">base</th>
+<th class="b header" rowspan="2" scope="col">ecog</th>
+<th class="b header" rowspan="2" scope="col">w21m</th>
+<th class="r b header" rowspan="2" scope="col">Freq</th>
+<th class="r b header" rowspan="2" scope="col">Percent</th>
+<th class="c b header" colspan="2" scope="colgroup">Group Means</th>
+</tr>
+<tr>
+<th class="r b header" scope="col">base</th>
+<th class="r b header" scope="col">w21m</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="r rowheader" scope="row">1</th>
+<td class="data">X</td>
+<td class="data">X</td>
+<td class="data">X</td>
+<td class="data">X</td>
+<td class="r data">1029</td>
+<td class="r data">81.67</td>
+<td class="r data">11.747077</td>
+<td class="r data">11.146394</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">2</th>
+<td class="data">X</td>
+<td class="data">X</td>
+<td class="data">X</td>
+<td class="data">.</td>
+<td class="r data">231</td>
+<td class="r data">18.33</td>
+<td class="r data">12.786755</td>
+<td class="r data">.</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX4" aria-label="Regression Models for Monotone Method">
+<h1 class="contentitem toc">Regression Models for Monotone Method</h1>
+<table class="table" style="border-spacing: 0" aria-label="Regression Models for Monotone Method">
+<caption aria-label="Regression Models for Monotone Method"></caption>
+<colgroup><col/><col/></colgroup><colgroup><col/><col/><col/><col/><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="10" scope="colgroup">Regression Models for Monotone Method</th>
+</tr>
+<tr>
+<th class="b header" rowspan="2" scope="col">Imputed<br/>Variable</th>
+<th class="b header" rowspan="2" scope="col">Effect</th>
+<th class="r b header" rowspan="2" scope="col">trt</th>
+<th class="r b header" rowspan="2" scope="col">ecog</th>
+<th class="r b header" rowspan="2" scope="col">Obs-Data</th>
+<th class="c b header" colspan="5" scope="colgroup">Imputation</th>
+</tr>
+<tr>
+<th class="r b header" scope="col">1</th>
+<th class="r b header" scope="col">2</th>
+<th class="r b header" scope="col">3</th>
+<th class="r b header" scope="col">4</th>
+<th class="r b header" scope="col">5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">w21m</th>
+<th class="data">Intercept</th>
+<td class="r data">.</td>
+<td class="r data">.</td>
+<td class="r data">0.05430</td>
+<td class="r data">0.087173</td>
+<td class="r data">0.001964</td>
+<td class="r data">0.016101</td>
+<td class="r data" style="white-space: nowrap">-0.001602</td>
+<td class="r data">0.067405</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">w21m</th>
+<th class="data">trt</th>
+<td class="r data">1.000000</td>
+<td class="r data">.</td>
+<td class="r data">0.30721</td>
+<td class="r data">0.313453</td>
+<td class="r data">0.336266</td>
+<td class="r data">0.354159</td>
+<td class="r data">0.310824</td>
+<td class="r data">0.325524</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">w21m</th>
+<th class="data">base</th>
+<td class="r data">.</td>
+<td class="r data">.</td>
+<td class="r data" style="white-space: nowrap">-0.11128</td>
+<td class="r data" style="white-space: nowrap">-0.117626</td>
+<td class="r data" style="white-space: nowrap">-0.099220</td>
+<td class="r data" style="white-space: nowrap">-0.046267</td>
+<td class="r data" style="white-space: nowrap">-0.129622</td>
+<td class="r data" style="white-space: nowrap">-0.090947</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">w21m</th>
+<th class="data">ecog</th>
+<td class="r data">.</td>
+<td class="r data">0</td>
+<td class="r data">0.16975</td>
+<td class="r data">0.160584</td>
+<td class="r data">0.195864</td>
+<td class="r data">0.244711</td>
+<td class="r data">0.183199</td>
+<td class="r data">0.204142</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">w21m</th>
+<th class="data">ecog</th>
+<td class="r data">.</td>
+<td class="r data">1.000000</td>
+<td class="r data" style="white-space: nowrap">-0.03009</td>
+<td class="r data">0.052199</td>
+<td class="r data">0.013931</td>
+<td class="r data" style="white-space: nowrap">-0.039270</td>
+<td class="r data" style="white-space: nowrap">-0.037778</td>
+<td class="r data" style="white-space: nowrap">-0.107342</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX5" aria-label="Variance Information">
+<h1 class="contentitem toc">Variance Information</h1>
+<table class="table" style="border-spacing: 0" aria-label="Variance Information">
+<caption aria-label="Variance Information"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="8" scope="colgroup">Variance Information (5 Imputations)</th>
+</tr>
+<tr>
+<th class="b header" rowspan="2" scope="col">Variable</th>
+<th class="c b header" colspan="3" scope="colgroup">Variance</th>
+<th class="r b header" rowspan="2" scope="col">DF</th>
+<th class="r b header" rowspan="2" scope="col">Relative<br/>Increase<br/>in Variance</th>
+<th class="r b header" rowspan="2" scope="col">Fraction<br/>Missing<br/>Information</th>
+<th class="r b header" rowspan="2" scope="col">Relative<br/>Efficiency</th>
+</tr>
+<tr>
+<th class="r b header" scope="col">Between</th>
+<th class="r b header" scope="col">Within</th>
+<th class="r b header" scope="col">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">w21m</th>
+<td class="r data">0.000096282</td>
+<td class="r data">0.001616</td>
+<td class="r data">0.001732</td>
+<td class="r data">508.84</td>
+<td class="r data">0.071488</td>
+<td class="r data">0.068789</td>
+<td class="r data">0.986429</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX6" aria-label="Parameter Estimates">
+<h1 class="contentitem toc">Parameter Estimates</h1>
+<table class="table" style="border-spacing: 0" aria-label="Parameter Estimates">
+<caption aria-label="Parameter Estimates"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/><col/><col/><col/><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="11" scope="colgroup">Parameter Estimates (5 Imputations)</th>
+</tr>
+<tr>
+<th class="b header" scope="col">Variable</th>
+<th class="r b header" scope="col">Mean</th>
+<th class="r b header" scope="col">Std Error</th>
+<th class="c b header" colspan="2" scope="colgroup">95%&#160;Confidence&#160;Limits</th>
+<th class="r b header" scope="col">DF</th>
+<th class="r b header" scope="col">Minimum</th>
+<th class="r b header" scope="col">Maximum</th>
+<th class="r b header" scope="col">Mu0</th>
+<th class="r b header" scope="col">t for H0:<br/>Mean=Mu0</th>
+<th class="r b header" scope="col">Pr&#160;&gt;&#160;|t|</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">w21m</th>
+<td class="r data">11.227664</td>
+<td class="r data">0.041614</td>
+<td class="r data">11.14591</td>
+<td class="r data">11.30942</td>
+<td class="r data">508.84</td>
+<td class="r data">11.215008</td>
+<td class="r data">11.238717</td>
+<td class="r data">0</td>
+<td class="r data">269.80</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+</tbody>
+</table>
+</article>
+</section>
+<section data-name="MIAnalyze" data-sec-type="proc">
+<hr class="pagebreak"/>
+<div id="IDX7" class="proc_title_group">
+<p class="c proctitle">The MIANALYZE Procedure</p>
+</div>
+<h1 class="contentprocname toc">The MIAnalyze Procedure</h1>
+<article aria-label="Model Information">
+<h1 class="contentitem toc">Model Information</h1>
+<table class="table" style="border-spacing: 0" aria-label="Model Information">
+<caption aria-label="Model Information"></caption>
+<colgroup><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="2" scope="colgroup">Model Information</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Data Set</th>
+<td class="data">WORK.OUTUNI1</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Number of Imputations</th>
+<td class="data">5</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX8" aria-label="Variance Information">
+<h1 class="contentitem toc">Variance Information</h1>
+<table class="table" style="border-spacing: 0" aria-label="Variance Information">
+<caption aria-label="Variance Information"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="8" scope="colgroup">Variance Information (5 Imputations)</th>
+</tr>
+<tr>
+<th class="b header" rowspan="2" scope="col">Parameter</th>
+<th class="c b header" colspan="3" scope="colgroup">Variance</th>
+<th class="r b header" rowspan="2" scope="col">DF</th>
+<th class="r b header" rowspan="2" scope="col">Relative<br/>Increase<br/>in Variance</th>
+<th class="r b header" rowspan="2" scope="col">Fraction<br/>Missing<br/>Information</th>
+<th class="r b header" rowspan="2" scope="col">Relative<br/>Efficiency</th>
+</tr>
+<tr>
+<th class="r b header" scope="col">Between</th>
+<th class="r b header" scope="col">Within</th>
+<th class="r b header" scope="col">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">mChg</th>
+<td class="r data">0.000385</td>
+<td class="r data">0.005757</td>
+<td class="r data">0.006219</td>
+<td class="r data">724.27</td>
+<td class="r data">0.080282</td>
+<td class="r data">0.076861</td>
+<td class="r data">0.984860</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX9" aria-label="Parameter Estimates">
+<h1 class="contentitem toc">Parameter Estimates</h1>
+<table class="table" style="border-spacing: 0" aria-label="Parameter Estimates">
+<caption aria-label="Parameter Estimates"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/><col/><col/><col/><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="11" scope="colgroup">Parameter Estimates (5 Imputations)</th>
+</tr>
+<tr>
+<th class="b header" scope="col">Parameter</th>
+<th class="r b header" scope="col">Estimate</th>
+<th class="r b header" scope="col">Std Error</th>
+<th class="c b header" colspan="2" scope="colgroup">95%&#160;Confidence&#160;Limits</th>
+<th class="r b header" scope="col">DF</th>
+<th class="r b header" scope="col">Minimum</th>
+<th class="r b header" scope="col">Maximum</th>
+<th class="r b header" scope="col">Theta0</th>
+<th class="r b header" scope="col">t for H0:<br/>Parameter=Theta0</th>
+<th class="r b header" scope="col">Pr&#160;&gt;&#160;|t|</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">mChg</th>
+<td class="r data" style="white-space: nowrap">-0.388727</td>
+<td class="r data">0.078859</td>
+<td class="r data" style="white-space: nowrap">-0.54355</td>
+<td class="r data" style="white-space: nowrap">-0.23391</td>
+<td class="r data">724.27</td>
+<td class="r data" style="white-space: nowrap">-0.414038</td>
+<td class="r data" style="white-space: nowrap">-0.366620</td>
+<td class="r data">0</td>
+<td class="r data" style="white-space: nowrap">-4.93</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+</tbody>
+</table>
+</article>
+</section>
+<section data-name="MIAnalyze" data-sec-type="proc">
+<hr class="pagebreak"/>
+<div id="IDX10" class="proc_title_group">
+<p class="c proctitle">The MIANALYZE Procedure</p>
+</div>
+<h1 class="contentprocname toc">The MIAnalyze Procedure</h1>
+<article aria-label="Model Information">
+<h1 class="contentitem toc">Model Information</h1>
+<table class="table" style="border-spacing: 0" aria-label="Model Information">
+<caption aria-label="Model Information"></caption>
+<colgroup><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="2" scope="colgroup">Model Information</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Data Set</th>
+<td class="data">WORK.OUTUNI2</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Number of Imputations</th>
+<td class="data">5</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX11" aria-label="Variance Information">
+<h1 class="contentitem toc">Variance Information</h1>
+<table class="table" style="border-spacing: 0" aria-label="Variance Information">
+<caption aria-label="Variance Information"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="8" scope="colgroup">Variance Information (5 Imputations)</th>
+</tr>
+<tr>
+<th class="b header" rowspan="2" scope="col">Parameter</th>
+<th class="c b header" colspan="3" scope="colgroup">Variance</th>
+<th class="r b header" rowspan="2" scope="col">DF</th>
+<th class="r b header" rowspan="2" scope="col">Relative<br/>Increase<br/>in Variance</th>
+<th class="r b header" rowspan="2" scope="col">Fraction<br/>Missing<br/>Information</th>
+<th class="r b header" rowspan="2" scope="col">Relative<br/>Efficiency</th>
+</tr>
+<tr>
+<th class="r b header" scope="col">Between</th>
+<th class="r b header" scope="col">Within</th>
+<th class="r b header" scope="col">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">mChg</th>
+<td class="r data">0</td>
+<td class="r data">0.005493</td>
+<td class="r data">0.005493</td>
+<td class="r data">.</td>
+<td class="r data">0</td>
+<td class="r data">.</td>
+<td class="r data">.</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX12" aria-label="Parameter Estimates">
+<h1 class="contentitem toc">Parameter Estimates</h1>
+<table class="table" style="border-spacing: 0" aria-label="Parameter Estimates">
+<caption aria-label="Parameter Estimates"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/><col/><col/><col/><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="11" scope="colgroup">Parameter Estimates (5 Imputations)</th>
+</tr>
+<tr>
+<th class="b header" scope="col">Parameter</th>
+<th class="r b header" scope="col">Estimate</th>
+<th class="r b header" scope="col">Std Error</th>
+<th class="c b header" colspan="2" scope="colgroup">95%&#160;Confidence&#160;Limits</th>
+<th class="r b header" scope="col">DF</th>
+<th class="r b header" scope="col">Minimum</th>
+<th class="r b header" scope="col">Maximum</th>
+<th class="r b header" scope="col">Theta0</th>
+<th class="r b header" scope="col">t for H0:<br/>Parameter=Theta0</th>
+<th class="r b header" scope="col">Pr&#160;&gt;&#160;|t|</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">mChg</th>
+<td class="r data" style="white-space: nowrap">-1.031315</td>
+<td class="r data">0.074115</td>
+<td class="r data">.</td>
+<td class="r data">.</td>
+<td class="r data">.</td>
+<td class="r data" style="white-space: nowrap">-1.031315</td>
+<td class="r data" style="white-space: nowrap">-1.031315</td>
+<td class="r data">0</td>
+<td class="r data">.</td>
+<td class="r data">.</td>
+</tr>
+</tbody>
+</table>
+</article>
+</section>
+</div>
+</body>
+</html>
